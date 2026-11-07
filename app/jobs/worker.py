@@ -3,6 +3,7 @@ import time
 import signal
 import threading
 import uuid
+from datetime import datetime, timezone
 from typing import Optional
 from sqlalchemy.orm import Session
 from app.db.session import SessionLocal, init_db
@@ -47,7 +48,11 @@ class Worker:
                     )
 
                     if job:
-                        self._process_claimed_job(db, job)
+                        # Check absolute deadline before starting work
+                        if JobService.check_and_enforce_timeout(db, job):
+                            logger.warning(f"Claimed job {job.job_id} already exceeded deadline. Timed out.")
+                        else:
+                            self._process_claimed_job(db, job)
                     else:
                         time.sleep(settings.WORKER_POLL_INTERVAL)
                 finally:
@@ -62,16 +67,17 @@ class Worker:
         """Process a single claimed extraction job."""
         job_id = job.job_id
         self._active_job_id = job_id
+        job_created_at = job.created_at
         logger.info(
             f"Worker {self.worker_id} processing job {job_id} (file: {job.file_name}, type: {job.file_type})",
             extra={"job_id": job_id, "worker_id": self.worker_id}
         )
 
-        # Start lease heartbeat thread
+        # Start lease heartbeat thread with deadline enforcement
         stop_heartbeat = threading.Event()
         self._heartbeat_thread = threading.Thread(
             target=self._run_heartbeat,
-            args=(job_id, stop_heartbeat),
+            args=(job_id, job_created_at, stop_heartbeat),
             daemon=True
         )
         self._heartbeat_thread.start()
@@ -81,9 +87,19 @@ class Worker:
         error_payload = None
 
         try:
+            # Check deadline before parsing
+            now = datetime.now(timezone.utc)
+            if (now - job_created_at).total_seconds() > settings.MAX_DOCUMENT_PROCESSING_TIME:
+                raise TimeoutError(f"Job processing time exceeded {settings.MAX_DOCUMENT_PROCESSING_TIME}s deadline.")
+
             # Stage: PARSING
             JobService.update_stage(db, job_id, JobStage.PARSING)
             parsed_doc = extract_document(job.file_path, job.file_type)
+
+            # Check deadline before extraction
+            now = datetime.now(timezone.utc)
+            if (now - job_created_at).total_seconds() > settings.MAX_DOCUMENT_PROCESSING_TIME:
+                raise TimeoutError(f"Job processing time exceeded {settings.MAX_DOCUMENT_PROCESSING_TIME}s deadline.")
 
             # Stage: EXTRACTING
             JobService.update_stage(db, job_id, JobStage.EXTRACTING)
@@ -94,6 +110,13 @@ class Worker:
             JobService.update_stage(db, job_id, JobStage.FINALIZING)
             status = JobStatus.SUCCESS
 
+        except TimeoutError as te:
+            logger.error(f"Job {job_id} timed out: {te}")
+            status = JobStatus.FAILED
+            error_payload = {
+                "code": "PROCESSING_TIMEOUT",
+                "message": str(te)
+            }
         except Exception as e:
             logger.exception(f"Extraction failed for job {job_id}: {e}")
             status = JobStatus.FAILED
@@ -116,10 +139,19 @@ class Worker:
                 error=error_payload
             )
 
-    def _run_heartbeat(self, job_id: str, stop_event: threading.Event):
-        """Periodically extend job lease while worker is actively running."""
+    def _run_heartbeat(self, job_id: str, job_created_at: datetime, stop_event: threading.Event):
+        """
+        Periodically extend job lease while worker is actively running.
+        Ceases heartbeat and aborts if total job age exceeds MAX_DOCUMENT_PROCESSING_TIME.
+        """
         interval = max(5, settings.WORKER_LEASE_SECONDS // 3)
         while not stop_event.wait(timeout=interval):
+            now = datetime.now(timezone.utc)
+            elapsed = (now - job_created_at).total_seconds()
+            if elapsed > settings.MAX_DOCUMENT_PROCESSING_TIME:
+                logger.error(f"Job {job_id} exceeded max processing time in heartbeat. Stopping lease renewals.")
+                break
+
             try:
                 db = SessionLocal()
                 try:
@@ -147,4 +179,3 @@ def run_worker():
 
 if __name__ == "__main__":
     run_worker()
-

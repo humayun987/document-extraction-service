@@ -1,4 +1,5 @@
-from typing import Dict, Any, List
+import base64
+from typing import Dict, Any, List, Optional
 
 EXTRACTION_SYSTEM_PROMPT = """You are an expert commercial real estate (CRE) document intelligence extractor.
 Your task is to extract structured values from the provided document context strictly adhering to the requested field schema.
@@ -38,8 +39,12 @@ CRITICAL RULES:
 def build_extraction_prompt(
     schema_fields: Dict[str, Any],
     document_context: str,
-    table_context: str = ""
+    table_context: str = "",
+    images_base64: Optional[List[str]] = None
 ) -> List[Dict[str, Any]]:
+    """
+    Build chat completion messages supporting text and multimodal image inputs.
+    """
     fields_desc = []
     for k, v in schema_fields.items():
         name = v.get("name", k)
@@ -63,7 +68,25 @@ Remember:
 - Verbatim citations prefixed with location.
 - Numbers as JSON numbers without commas or currency symbols.
 """
-    return [
-        {"role": "system", "content": EXTRACTION_SYSTEM_PROMPT},
-        {"role": "user", "content": prompt_body}
-    ]
+    if images_base64:
+        # Multimodal vision message payload
+        user_content: List[Dict[str, Any]] = [
+            {"type": "text", "text": prompt_body}
+        ]
+        for img_b64 in images_base64[:5]:  # limit to top relevant pages to control token payload
+            user_content.append({
+                "type": "image_url",
+                "image_url": {
+                    "url": f"data:image/png;base64,{img_b64}",
+                    "detail": "high"
+                }
+            })
+        return [
+            {"role": "system", "content": EXTRACTION_SYSTEM_PROMPT},
+            {"role": "user", "content": user_content}
+        ]
+    else:
+        return [
+            {"role": "system", "content": EXTRACTION_SYSTEM_PROMPT},
+            {"role": "user", "content": prompt_body}
+        ]

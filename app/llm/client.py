@@ -1,7 +1,4 @@
-import json
-import time
-import random
-import re
+import os
 from typing import Dict, Any, List, Optional
 import httpx
 from app.config import settings
@@ -20,6 +17,10 @@ PERMITTED_MODELS = {
     "deepseek/deepseek-v3.2",
 }
 
+class LLMConfigurationError(RuntimeError):
+    """Raised when LLM completion is attempted without proper credentials or base URL."""
+    pass
+
 class LLMClient:
     def __init__(self, usage_tracker: Optional[UsageTracker] = None):
         self.usage_tracker = usage_tracker or UsageTracker()
@@ -36,19 +37,21 @@ class LLMClient:
         """
         Execute chat completion through configured OpenAI-compatible gateway.
         Enforces strict model whitelist and environment-based credentials.
+        Raises LLMConfigurationError if gateway credentials are not configured.
         """
         if model_id not in PERMITTED_MODELS:
             raise ValueError(
                 f"Model '{model_id}' is not permitted by assignment whitelist: {sorted(PERMITTED_MODELS)}"
             )
 
-        base_url = settings.LLM_BASE_URL.rstrip("/")
+        base_url = (settings.LLM_BASE_URL or "").rstrip("/")
         api_key = settings.LLM_API_KEY
 
         if not base_url or not api_key:
-            # When running tests without API key or before evaluator sets it
-            logger.warning("LLM_BASE_URL or LLM_API_KEY not set. Returning mock fallback response.")
-            return {"content": "{}", "usage": {"prompt_tokens": 0, "completion_tokens": 0}}
+            raise LLMConfigurationError(
+                "LLM_BASE_URL or LLM_API_KEY environment variable is not configured. "
+                "Set these variables with valid credentials to enable LLM extraction."
+            )
 
         endpoint = f"{base_url}/chat/completions"
         headers = {
@@ -86,7 +89,6 @@ class LLMClient:
                         t_in = usage.get("prompt_tokens", 0)
                         t_out = usage.get("completion_tokens", 0)
                         
-                        # Provider reported cost if available
                         reported_cost = None
                         if "cost" in data:
                             reported_cost = float(data["cost"])
@@ -102,28 +104,28 @@ class LLMClient:
                         return {"content": content, "raw": data}
 
                     elif resp.status_code == 429:
-                        # Rate limited
                         retry_after = resp.headers.get("Retry-After")
-                        wait_sec = float(retry_after) if retry_after else delay + random.uniform(0.5, 1.5)
+                        wait_sec = float(retry_after) if retry_after and retry_after.isdigit() else delay + 0.5
                         logger.warning(f"HTTP 429 Rate limit on model {model_id}. Backing off for {wait_sec:.2f}s...")
+                        import time
                         time.sleep(wait_sec)
                         delay *= 2
 
                     elif resp.status_code >= 500:
-                        # Gateway/upstream error
                         logger.warning(f"HTTP {resp.status_code} server error from LLM gateway on attempt {attempt}")
-                        time.sleep(delay + random.uniform(0.1, 0.5))
+                        import time
+                        time.sleep(delay)
                         delay *= 2
                     else:
-                        # Permanent 4xx error (e.g. 400 Bad Request)
                         error_text = resp.text
                         logger.error(f"HTTP {resp.status_code} permanent error from LLM gateway: {error_text}")
                         raise RuntimeError(f"LLM gateway returned HTTP {resp.status_code}: {error_text}")
 
-            except httpx.RequestError as exc:
+            except (httpx.RequestError, ValueError) as exc:
                 last_exception = exc
-                logger.warning(f"Connection error to LLM gateway on attempt {attempt}: {exc}")
-                time.sleep(delay + random.uniform(0.1, 0.5))
+                logger.warning(f"Transient error connecting to LLM gateway on attempt {attempt}: {exc}")
+                import time
+                time.sleep(delay)
                 delay *= 2
 
         raise RuntimeError(f"LLM request exhausted {max_retries} retries for model {model_id}. Last error: {last_exception}")
@@ -131,8 +133,9 @@ class LLMClient:
     @staticmethod
     def extract_json(content: str) -> Dict[str, Any]:
         """Parse JSON from model response, handling markdown fences and common issues."""
+        import re
+        import json
         cleaned = content.strip()
-        # Remove markdown fences
         fence_match = re.search(r"```(?:json)?\s*(.*?)\s*```", cleaned, re.DOTALL)
         if fence_match:
             cleaned = fence_match.group(1).strip()
@@ -140,10 +143,8 @@ class LLMClient:
         try:
             return json.loads(cleaned)
         except json.JSONDecodeError:
-            # Try to locate the outermost {...}
             start = cleaned.find("{")
             end = cleaned.rfind("}")
             if start != -1 and end != -1 and end > start:
                 return json.loads(cleaned[start:end+1])
             raise
-

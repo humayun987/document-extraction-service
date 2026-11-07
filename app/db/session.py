@@ -1,5 +1,6 @@
+import os
 import time
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker, Session
 from app.config import settings
 from app.db.models import Base
@@ -20,8 +21,13 @@ engine = create_engine(
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 def init_db(retries: int = 5, delay: float = 2.0):
-    """Initialize database tables with connection retry."""
+    """
+    Initialize database tables with connection retry.
+    Never silently falls back to SQLite if PostgreSQL is configured.
+    """
     global engine, SessionLocal
+    is_sqlite = "sqlite" in settings.DATABASE_URL or os.environ.get("TESTING") == "1"
+    
     for attempt in range(1, retries + 1):
         try:
             Base.metadata.create_all(bind=engine)
@@ -30,13 +36,15 @@ def init_db(retries: int = 5, delay: float = 2.0):
         except Exception as e:
             logger.warning(f"Database connection attempt {attempt}/{retries} failed: {e}")
             if attempt == retries:
-                # If Postgres is not up, fallback gracefully to SQLite for local development/testing
-                logger.error("Could not connect to configured DATABASE_URL. Falling back to local SQLite.")
-                fallback_url = "sqlite:///./extraction.db"
-                engine = create_engine(fallback_url, connect_args={"check_same_thread": False})
-                SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-                Base.metadata.create_all(bind=engine)
-                return
+                if is_sqlite:
+                    logger.error(f"Failed to connect to SQLite: {e}")
+                    raise
+                else:
+                    # In production / Docker Compose, do NOT fall back to local SQLite.
+                    # Failing fast ensures healthchecks detect DB issues rather than desyncing containers.
+                    raise ConnectionError(
+                        f"Failed to connect to configured database at {settings.DATABASE_URL} after {retries} attempts: {e}"
+                    )
             time.sleep(delay)
 
 def get_db():
@@ -46,3 +54,12 @@ def get_db():
     finally:
         db.close()
 
+def check_db_health() -> bool:
+    """Verify database responsiveness for healthchecks."""
+    try:
+        with engine.connect() as conn:
+            conn.execute(text("SELECT 1"))
+        return True
+    except Exception as e:
+        logger.warning(f"Database health check failed: {e}")
+        return False

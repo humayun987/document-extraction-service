@@ -39,7 +39,7 @@ class Job(Base):
     max_retries = Column(Integer, nullable=False, default=3)
 
     __table_args__ = (
-        Index("idx_org_idempotency", "organization_id", "idempotency_key"),
+        UniqueConstraint("organization_id", "idempotency_key", name="uq_org_idempotency"),
         Index("idx_status_lease", "status", "lease_expires_at"),
     )
 
@@ -53,4 +53,3 @@ class Job(Base):
             "result": self.result,
             "error": self.error,
         }
-

@@ -29,6 +29,10 @@ class UsageTracker:
         self.cost_usd: float = 0.0
         self.models: Dict[str, ModelUsageStats] = {}
 
+    @property
+    def total_calls(self) -> int:
+        return self.model_calls
+
     def record_call(
         self,
         model_id: str,

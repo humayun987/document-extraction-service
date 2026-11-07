@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional, Dict, Any, Tuple
 from sqlalchemy.orm import Session
+from sqlalchemy.exc import IntegrityError
 from app.config import settings
 from app.db.models import Job
 from app.jobs.state_machine import JobStatus, JobStage, is_terminal, validate_transition
@@ -13,7 +14,9 @@ from app.utils.file_detection import detect_file_type
 from app.utils.logging import logger
 
 def deliver_webhook(webhook_url: str, payload: Dict[str, Any], max_retries: int = 3):
-    """Deliver webhook asynchronously with backoff; non-blocking to worker."""
+    """Deliver webhook asynchronously with bounded backoff. Covers SUCCESS, PARTIAL, and FAILED."""
+    if not webhook_url:
+        return
     for attempt in range(1, max_retries + 1):
         try:
             with httpx.Client(timeout=10.0) as client:
@@ -29,7 +32,7 @@ def deliver_webhook(webhook_url: str, payload: Dict[str, Any], max_retries: int 
         except Exception as e:
             logger.warning(f"Webhook connection failure on attempt {attempt}: {e}")
         import time
-        time.sleep(2 ** attempt)
+        time.sleep(min(8.0, 2 ** attempt))
 
 class JobService:
     @staticmethod
@@ -42,7 +45,8 @@ class JobService:
         webhook_url: Optional[str] = None
     ) -> Tuple[Job, bool]:
         """
-        Validate upload, calculate hashes, check idempotency, persist file and job.
+        Validate upload, calculate hashes, check idempotency with DB unique constraint,
+        persist file to isolated job directory, and insert job.
         Returns (job, is_existing).
         """
         if len(file_bytes) > settings.MAX_UPLOAD_SIZE:
@@ -53,7 +57,7 @@ class JobService:
         schema_hash = hash_schema(schema_dict)
         idempotency_key = generate_idempotency_key(org_id, file_hash, schema_hash)
         
-        # Idempotency check: check if same tenant submitted identical file + schema
+        # Fast query for idempotency
         existing_job = db.query(Job).filter(
             Job.organization_id == org_id,
             Job.idempotency_key == idempotency_key
@@ -61,7 +65,7 @@ class JobService:
         
         if existing_job:
             logger.info(
-                f"Idempotent submission detected for job {existing_job.job_id}",
+                f"Idempotent submission detected for existing job {existing_job.job_id}",
                 extra={"job_id": existing_job.job_id, "organization_id": org_id}
             )
             return existing_job, True
@@ -69,6 +73,8 @@ class JobService:
         job_id = str(uuid.uuid4())
         job_dir = settings.STORAGE_DIR / job_id
         job_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Use sanitized filename inside unique job directory
         file_path = job_dir / file_name
         file_path.write_bytes(file_bytes)
         
@@ -94,15 +100,25 @@ class JobService:
             max_retries=3
         )
         
-        db.add(new_job)
-        db.commit()
-        db.refresh(new_job)
-        
-        logger.info(
-            f"Created job {job_id} for org {org_id} ({file_name}, {file_type})",
-            extra={"job_id": job_id, "organization_id": org_id, "file_type": file_type}
-        )
-        return new_job, False
+        try:
+            db.add(new_job)
+            db.commit()
+            db.refresh(new_job)
+            logger.info(
+                f"Created job {job_id} for org {org_id} ({file_name}, {file_type})",
+                extra={"job_id": job_id, "organization_id": org_id, "file_type": file_type}
+            )
+            return new_job, False
+        except IntegrityError:
+            # Handles concurrent identical submissions gracefully via DB unique constraint
+            db.rollback()
+            existing = db.query(Job).filter(
+                Job.organization_id == org_id,
+                Job.idempotency_key == idempotency_key
+            ).first()
+            if existing:
+                return existing, True
+            raise
 
     @staticmethod
     def get_job(db: Session, job_id: str, org_id: str) -> Optional[Job]:
@@ -122,6 +138,35 @@ class JobService:
             db.commit()
 
     @staticmethod
+    def check_and_enforce_timeout(db: Session, job: Job) -> bool:
+        """
+        Check if job has exceeded MAX_DOCUMENT_PROCESSING_TIME (1800s) from created_at.
+        If exceeded, transitions job to FAILED. Returns True if timed out.
+        """
+        if is_terminal(job.status):
+            return False
+            
+        now = datetime.now(timezone.utc)
+        created = job.created_at if job.created_at.tzinfo else job.created_at.replace(tzinfo=timezone.utc)
+        elapsed = (now - created).total_seconds()
+        if elapsed > settings.MAX_DOCUMENT_PROCESSING_TIME:
+            logger.error(
+                f"Job {job.job_id} exceeded maximum processing time of {settings.MAX_DOCUMENT_PROCESSING_TIME}s (elapsed: {elapsed:.1f}s). Timing out."
+            )
+            JobService.finalize_job(
+                db=db,
+                job_id=job.job_id,
+                worker_id=job.worker_id or "system-timeout",
+                status=JobStatus.FAILED,
+                error={
+                    "code": "PROCESSING_TIMEOUT",
+                    "message": f"Processing exceeded absolute deadline of {settings.MAX_DOCUMENT_PROCESSING_TIME} seconds."
+                }
+            )
+            return True
+        return False
+
+    @staticmethod
     def finalize_job(
         db: Session,
         job_id: str,
@@ -133,6 +178,7 @@ class JobService:
         """
         Transition job to terminal status (SUCCESS, PARTIAL, FAILED).
         Guarantees terminal status immutability.
+        Triggers webhook delivery for all terminal statuses.
         """
         job = db.query(Job).filter(Job.job_id == job_id).first()
         if not job:
@@ -142,8 +188,8 @@ class JobService:
             logger.warning(f"Attempted to finalize already terminal job {job_id} (status: {job.status})")
             return False
             
-        # Verify worker lease hasn't been claimed by someone else
-        if job.worker_id != worker_id and job.worker_id is not None:
+        # Verify worker lease hasn't been claimed by someone else (unless system-timeout)
+        if worker_id != "system-timeout" and job.worker_id != worker_id and job.worker_id is not None:
             logger.error(f"Worker {worker_id} tried to finalize job {job_id} owned by {job.worker_id}")
             return False
             
@@ -163,14 +209,14 @@ class JobService:
             extra={"job_id": job_id, "status": status}
         )
         
-        # Trigger webhook if configured
-        if job.webhook_url and (status in {JobStatus.SUCCESS, JobStatus.PARTIAL}):
+        # Trigger webhook for ALL terminal statuses: SUCCESS, PARTIAL, and FAILED
+        if job.webhook_url:
             import threading
+            payload = job.to_dict()
             threading.Thread(
                 target=deliver_webhook,
-                args=(job.webhook_url, job.to_dict()),
+                args=(job.webhook_url, payload),
                 daemon=True
             ).start()
             
         return True
-

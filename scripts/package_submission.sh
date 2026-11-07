@@ -1,17 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROLLNO="${1:-230480}"
-FIRSTNAME="${2:-humayun}"
-LASTNAME="${3:-ahmad}"
-ROLE="${4:-aiml}"
+ROLL_NO="230480"
+FIRST_NAME="humayun"
+LAST_NAME="ahmad"
+ROLE="software"
 
-ZIPNAME="${ROLLNO}_${FIRSTNAME}_${LASTNAME}_${ROLE}.zip"
-ZIPNAME=$(echo "$ZIPNAME" | tr '[:upper:]' '[:lower:]')
-
-echo "Packaging submission archive: ../$ZIPNAME"
-
-cd "$(dirname "$0")/.."
-python scripts/package_submission.py "$ROLLNO" "$FIRSTNAME" "$LASTNAME" "$ROLE"
-
-echo "Done."
+echo "Building submission package for $ROLL_NO ($FIRST_NAME $LAST_NAME, role: $ROLE)..."
+python3 scripts/package_submission.py "$ROLL_NO" "$FIRST_NAME" "$LAST_NAME" "$ROLE"
