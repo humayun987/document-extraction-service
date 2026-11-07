@@ -1,6 +1,6 @@
 # Outcome Document Extraction Service
 
-**Selected Role:** AI/ML Developer (`aiml`)  
+**Selected Role:** Software Developer (`software`)  
 **Candidate Name:** Humayun Ahmad  
 **Roll Number:** 230480  
 **Repository:** https://github.com/humayun987/document-extraction-service  
