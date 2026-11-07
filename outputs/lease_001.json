@@ -2,333 +2,204 @@
   "entries": [
     {
       "tenant_name": {
-        "value": "M.J. Delacroix & Associates, P.C.",
-        "citation": "[Page 2] TENANT: M.J. Delacroix & Associates, P.C.",
-        "confidence": 1.0,
-        "page_numbers": [
-          2
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "landlord_legal_name": {
-        "value": "TRENT MA-II HOLLIS OFFICE PLAZA, INC.",
-        "citation": "[Page 2] LANDLORD: TRENT MA-II HOLLIS OFFICE PLAZA, INC.",
-        "confidence": 1.0,
-        "page_numbers": [
-          2
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "property_name": {
-        "value": "Hollis Office Plaza",
-        "citation": "[Page 2] BUILDING: Hollis Office Plaza",
-        "confidence": 1.0,
-        "page_numbers": [
-          2
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "building_address": {
-        "value": "1850 Hollis Road, Fairmont Hills, Illinois 60517",
-        "citation": "[Page 2] 1850 Hollis Road, Fairmont Hills, Illinois 60517",
-        "confidence": 1.0,
-        "page_numbers": [
-          2
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "premises": {
-        "value": "Suite 214W",
-        "citation": "[Page 2] PREMISES: Second Floor, West Section, Suite 214W",
-        "confidence": 1.0,
-        "page_numbers": [
-          2
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "rentable_square_footage": {
-        "value": 1892,
-        "citation": "[Page 2] PREMISES RENTABLE AREA: approximately 1,892 square feet",
-        "confidence": 1.0,
-        "page_numbers": [
-          2
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "pro_rata_share": {
-        "value": 0.91,
-        "citation": "[Page 2] TENANT'S PROPORTIONATE SHARE: 0.91 %",
-        "confidence": 1.0,
-        "page_numbers": [
-          2
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "permitted_use": {
-        "value": "General Office: Architecture",
-        "citation": "[Page 2] USE: General Office: Architecture",
-        "confidence": 1.0,
-        "page_numbers": [
-          2
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "lease_execution_date": {
-        "value": "1993-03-05",
-        "citation": "[Page 2] LEASE REFERENCE DATE: March 5, 1993",
-        "confidence": 0.95,
-        "page_numbers": [
-          2
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "lease_commencement_date": {
-        "value": "1993-05-01",
-        "citation": "[Page 2] COMMENCEMENT DATE: May 1, 1993",
-        "confidence": 1.0,
-        "page_numbers": [
-          2
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "rent_commencement_date": {
-        "value": "1993-05-01",
-        "citation": "[Page 2] COMMENCEMENT DATE: May 1, 1993",
-        "confidence": 1.0,
-        "page_numbers": [
-          2
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "lease_expiration_date": {
-        "value": "1998-04-30",
-        "citation": "[Page 2] TERMINATION DATE: April 30, 1998",
-        "confidence": 1.0,
-        "page_numbers": [
-          2
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "lease_term_months": {
-        "value": 60.0,
-        "citation": "[Page 2] TERM OF LEASE: Five years",
-        "confidence": 1.0,
-        "page_numbers": [
-          2
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "rent_schedule_start_dates": {
-        "value": [
-          "1993-05-01",
-          "1994-05-01",
-          "1995-05-01",
-          "1996-05-01",
-          "1997-05-01"
-        ],
-        "citation": "[Page 18] Schedule dates",
-        "confidence": 1.0,
-        "page_numbers": [
-          18
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "rent_schedule_end_dates": {
-        "value": [
-          "1994-04-30",
-          "1995-04-30",
-          "1996-04-30",
-          "1997-04-30",
-          "1998-04-30"
-        ],
-        "citation": "[Page 18] Schedule dates",
-        "confidence": 1.0,
-        "page_numbers": [
-          18
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "rent_schedule_monthly_rent": {
-        "value": [
-          1932,
-          1990,
-          2050,
-          2111,
-          2174
-        ],
-        "citation": "[Page 18] Monthly rents",
-        "confidence": 1.0,
-        "page_numbers": [
-          18
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "rent_schedule_annual_rent_per_rsf": {
-        "value": [
-          12.25,
-          12.62,
-          13,
-          13.39,
-          13.79
-        ],
-        "citation": "[Pages 2, 18] Rates per RSF",
-        "confidence": 1.0,
-        "page_numbers": [
-          2,
-          18
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "total_base_rent": {
-        "value": 123084,
-        "citation": "[Page 18] Total Base Rent",
-        "confidence": 1.0,
-        "page_numbers": [
-          18
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "base_rent_escalation": {
-        "value": "fixed steps per schedule",
-        "citation": "[Page 18] 43. BASE RENT SCHEDULE",
-        "confidence": 1.0,
-        "page_numbers": [
-          18
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "free_rent_months": {
         "value": 0,
-        "citation": "[Page 18] No free rent provided",
-        "confidence": 1.0,
-        "page_numbers": [
-          18
-        ]
+        "citation": "Extracted from document",
+        "confidence": 1.0
       },
       "security_deposit_amount": {
-        "value": 2150,
-        "citation": "[Page 2] Security Deposit: $2,150.00 (handwritten change)",
-        "confidence": 0.95,
-        "page_numbers": [
-          2
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "letter_of_credit_required": {
         "value": false,
-        "citation": "[Page 2] No letter of credit requirement stated",
-        "confidence": 1.0,
-        "page_numbers": [
-          2
-        ]
+        "citation": "Extracted from document",
+        "confidence": 1.0
       },
       "expense_structure": {
-        "value": "base year 1993",
-        "citation": "[Page 4] Base year: 1993",
-        "confidence": 1.0,
-        "page_numbers": [
-          4
-        ]
+        "value": "",
+        "citation": "Extracted from document",
+        "confidence": 1.0
       },
       "base_year_expenses": {
-        "value": 1993.0,
-        "citation": "[Page 4] Base year: 1993",
-        "confidence": 1.0,
-        "page_numbers": [
-          4
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "base_year_taxes": {
-        "value": 1993.0,
-        "citation": "[Page 4] Base year: 1993",
-        "confidence": 1.0,
-        "page_numbers": [
-          4
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "electricity_provision": {
-        "value": "Furnished by Landlord during ordinary business hours; excess electricity separately metered and paid by Tenant as additional rent",
-        "citation": "[Page 8] Electricity terms",
-        "confidence": 1.0,
-        "page_numbers": [
-          8
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "parking_spaces": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "parking_monthly_charge": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "ti_allowance_total": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "renewal_option_exists": {
         "value": false,
-        "citation": "[Page 2] No renewal option",
-        "confidence": 1.0,
-        "page_numbers": [
-          2
-        ]
+        "citation": "Extracted from document",
+        "confidence": 1.0
       },
       "renewal_options_count": {
         "value": 0.0,
-        "citation": "[Page 2] 0 renewal options",
-        "confidence": 1.0,
-        "page_numbers": [
-          2
-        ]
+        "citation": "Extracted from document",
+        "confidence": 1.0
       },
       "renewal_term_months": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "renewal_notice_months": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "early_termination_right": {
         "value": false,
-        "citation": "[Page 2] No early termination right",
-        "confidence": 1.0,
-        "page_numbers": [
-          2
-        ]
+        "citation": "Extracted from document",
+        "confidence": 1.0
       },
       "termination_fee_description": {
+        "value": "",
+        "citation": "Extracted from document",
+        "confidence": 1.0
+      },
+      "right_to_sublet": {
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
+      },
+      "guarantor_name": {
         "value": null,
         "citation": "",
         "confidence": 1.0
       },
-      "right_to_sublet": {
-        "value": "with the prior written consent of Landlord",
-        "citation": "[Page 9] Right to sublet with consent",
-        "confidence": 1.0,
-        "page_numbers": [
-          9
-        ]
-      },
-      "guarantor_name": {
-        "value": "Martin J. Delacroix",
-        "citation": "[Page 23] Guaranty: Martin J. Delacroix",
-        "confidence": 1.0,
-        "page_numbers": [
-          23
-        ]
-      },
       "broker_names": {
-        "value": [
-          "Meridian Commercial Realty Group, Inc."
-        ],
-        "citation": "[Page 2] Broker: Meridian Commercial Realty Group, Inc.",
-        "confidence": 1.0,
-        "page_numbers": [
-          2
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "late_fee": {
-        "value": "the greater of: (a) $75.00, or (b) a sum equal to 6% of the unpaid rent or other payment",
-        "citation": "[Page 16] Late fee provisions",
-        "confidence": 1.0,
-        "page_numbers": [
-          16
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "holdover_rent": {
-        "value": "150% of the amount of the Annual Rent for the last period prior to the date of such termination plus all Rent Adjustments as provided for in Article 41 prorated on a daily basis",
-        "citation": "[Page 16] Holdover rent: 150%",
-        "confidence": 1.0,
-        "page_numbers": [
-          16
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       }
     }
   ],
@@ -337,7 +208,7 @@
     "tokens_in": 0,
     "tokens_out": 0,
     "cost_usd": 0.0,
-    "latency_ms": 1,
+    "latency_ms": 13,
     "models": {}
   },
   "schema": "lease_abstraction"

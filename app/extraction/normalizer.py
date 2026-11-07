@@ -5,7 +5,8 @@ from typing import Any, Optional, Tuple, List
 DATE_FORMATS = [
     "%Y-%m-%d", "%m/%d/%Y", "%d/%m/%Y", "%Y/%m/%d",
     "%b %d, %Y", "%B %d, %Y", "%d %b %Y", "%d %B %Y",
-    "%m/%d/%y", "%Y-%m-%dT%H:%M:%S", "%m-%d-%Y"
+    "%m/%d/%y", "%Y-%m-%dT%H:%M:%S", "%m-%d-%Y",
+    "%B %d %Y", "%b %d %Y"
 ]
 
 NUM_RE = re.compile(r"^[+-]?\d+(\.\d+)?$")
@@ -26,6 +27,12 @@ class Normalizer:
         if isinstance(raw, bool):
             return raw
 
+        if expected_type == "string":
+            s = str(raw).strip()
+            if s.lower() == "null":
+                return None
+            return s
+
         if isinstance(raw, (int, float)):
             # If float is whole number, return int
             if isinstance(raw, float) and raw.is_integer():
@@ -33,7 +40,7 @@ class Normalizer:
             return round(float(raw), 2)
 
         s = str(raw).strip()
-        if not s or s.lower() in {"null", "none", "n/a", "na", "-", "--", "---", "n.a."} or set(s) <= {"-", "_"}:
+        if not s or s.lower() in {"null", "n/a", "na", "-", "--", "---", "n.a."} or set(s) <= {"-", "_"}:
             return None
 
         # Check boolean
@@ -43,10 +50,18 @@ class Normalizer:
         if low in {"false", "no", "n"}:
             return False
 
-        # Check date
+        if low == "none":
+            if expected_type in {"number", "float", "integer", "int"}:
+                return None
+            return "none"
+
+        # Pre-process ordinal dates: e.g. "21st day of August, 2025" -> "August 21, 2025"
+        s_date_clean = re.sub(r"(?i)(\d{1,2})(?:st|nd|rd|th)?\s+day\s+of\s+([A-Za-z]+)", r"\2 \1", s)
+        s_date_clean = re.sub(r"(?<=\d)(?:st|nd|rd|th)", "", s_date_clean)
+
         for fmt in DATE_FORMATS:
             try:
-                dt = datetime.strptime(s, fmt).date()
+                dt = datetime.strptime(s_date_clean, fmt).date()
                 return dt.isoformat()
             except ValueError:
                 pass
@@ -68,4 +83,3 @@ class Normalizer:
             return round(val, 2)
 
         return s
-

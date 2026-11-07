@@ -10,7 +10,7 @@ from app.utils.logging import logger
 class PDFExtractor:
     @staticmethod
     def parse(file_path: str) -> ParsedDocument:
-        """Parse PDF document into structured pages with text, tables, and OCR fallback."""
+        """Parse PDF document into structured pages with text, tables, image rendering, and OCR fallback."""
         path = Path(file_path)
         if not path.exists():
             raise FileNotFoundError(f"PDF file not found: {file_path}")
@@ -26,7 +26,7 @@ class PDFExtractor:
         if doc.is_encrypted:
             raise ValueError("Password-protected PDF documents are not supported")
 
-        # 2. Extract with pdfplumber for table structures if needed
+        # 2. Extract with pdfplumber for table structures if available
         plumber_doc = None
         try:
             plumber_doc = pdfplumber.open(file_path)
@@ -62,15 +62,17 @@ class PDFExtractor:
             is_scanned = (alnum_chars < 40)
             
             image_bytes = None
-            if is_scanned and TESSERACT_AVAILABLE:
-                # Render page to high-res image
+            if is_scanned:
+                # Render page to image for multimodal vision reasoning
                 try:
-                    pix = page.get_pixmap(dpi=200)
+                    pix = page.get_pixmap(dpi=150)
                     image_bytes = pix.tobytes("png")
-                    # Run OCR
-                    ocr_text = run_local_ocr_on_image(image_bytes)
-                    if ocr_text:
-                        text = ocr_text
+                    
+                    # If local Tesseract is available, perform OCR
+                    if TESSERACT_AVAILABLE:
+                        ocr_text = run_local_ocr_on_image(image_bytes)
+                        if ocr_text:
+                            text = ocr_text
                 except Exception as e:
                     logger.warning(f"Error rendering/OCR for page {page_num}: {e}")
 
@@ -92,4 +94,3 @@ class PDFExtractor:
         doc.close()
 
         return parsed
-

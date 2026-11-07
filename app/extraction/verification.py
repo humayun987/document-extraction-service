@@ -27,6 +27,10 @@ class ContractVerifier:
                     desc = field_meta.get("description", "").lower()
                     if "list" in desc or "array" in desc:
                         inferred_type = "list"
+                    elif "string" in desc or "short phrase" in desc or field_key in {"zip_code", "postal_code", "unit", "unit_id", "suite", "base_rent_escalation"}:
+                        inferred_type = "string"
+                    elif "number" in desc or "amount" in desc or "percentage" in desc or "ratio" in desc:
+                        inferred_type = "number"
 
                 if field_key in entry and isinstance(entry[field_key], dict):
                     raw_fr = entry[field_key]

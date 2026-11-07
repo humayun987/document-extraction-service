@@ -3,190 +3,211 @@
     {
       "tenant_name": {
         "value": "KESTREL ANALYTICS USA LLC",
-        "citation": "[Paragraph 33] KESTREL ANALYTICS USA LLC as Tenant",
+        "citation": "[Paragraph 102] Tenant: KESTREL ANALYTICS USA LLC",
         "confidence": 1.0
       },
       "landlord_legal_name": {
         "value": "850 N. HARLOW AVENUE LLC",
-        "citation": "[Paragraph 26] 850 N. HARLOW AVENUE LLC as Landlord",
+        "citation": "[Paragraph 102] Landlord: 850 N. HARLOW AVENUE LLC",
         "confidence": 1.0
       },
       "property_name": {
         "value": "Harlow Office Building",
-        "citation": "[Paragraph 21] Harlow Office Building",
+        "citation": "[Paragraph 22] Harlow Office Building",
         "confidence": 1.0
       },
       "building_address": {
         "value": "ONE HARLOW PLACE, 850 N. HARLOW AVENUE, Naperville, Illinois 60540",
-        "citation": "[Paragraph 21] 850 North Harlow Avenue Naperville, Illinois 60540",
+        "citation": "[Paragraph 103] commonly known as ONE HARLOW PLACE, 850 N. HARLOW AVENUE, Naperville, Illinois 60540, for the term",
         "confidence": 1.0
       },
       "premises": {
         "value": "Suite 310",
-        "citation": "[Paragraph 63] Premises: Suite 310",
+        "citation": "[Paragraph 103] Suite 310",
         "confidence": 1.0
       },
       "rentable_square_footage": {
         "value": 1842,
-        "citation": "[Paragraph 64] 1,842 Rentable Square Feet",
+        "citation": "[Paragraph 103] 1,842 rentable square feet",
         "confidence": 1.0
       },
       "pro_rata_share": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "permitted_use": {
         "value": "general office purposes",
-        "citation": "[Paragraph 73] general office purposes",
+        "citation": "[Paragraph 117] Tenant shall use and occupy the Premises for general office purposes and no other purpose",
         "confidence": 1.0
       },
       "lease_execution_date": {
         "value": "2025-08-21",
-        "citation": "[Paragraph 19] Dated August 21, 2025",
+        "citation": "[Paragraph 102] made as of the 21st day of August, 2025",
         "confidence": 1.0
       },
       "lease_commencement_date": {
         "value": "2025-10-01",
-        "citation": "[Paragraph 65] Lease Commencement Date: October 1, 2025",
+        "citation": "[Paragraph 103] commencing on the 1st day of October, 2025",
         "confidence": 1.0
       },
       "rent_commencement_date": {
         "value": "2026-01-01",
-        "citation": "[Paragraph 67] Rent Commencement Date: January 1, 2026",
-        "confidence": 1.0
+        "citation": "[Paragraph 110] Abatement for 3 months",
+        "confidence": 1.0,
+        "page_numbers": [
+          110
+        ]
       },
       "lease_expiration_date": {
         "value": "2027-04-30",
-        "citation": "[Paragraph 66] Expiration Date: April 30, 2027",
+        "citation": "[Paragraph 103] terminating on the 30th day of April, 2027",
         "confidence": 1.0
       },
       "lease_term_months": {
         "value": 19.0,
-        "citation": "[Paragraph 65] 19 calendar months",
+        "citation": "[Paragraph 103] 19 calendar months",
         "confidence": 1.0
       },
       "rent_schedule_start_dates": {
         "value": [
           "2025-10-01"
         ],
-        "citation": "[Paragraph 68] Base Rent Schedule start",
-        "confidence": 1.0
+        "citation": "[Paragraph 110] Base rent schedule",
+        "confidence": 1.0,
+        "page_numbers": [
+          110
+        ]
       },
       "rent_schedule_end_dates": {
         "value": [
           "2027-04-30"
         ],
-        "citation": "[Paragraph 68] Base Rent Schedule end",
-        "confidence": 1.0
+        "citation": "[Paragraph 110] Base rent schedule",
+        "confidence": 1.0,
+        "page_numbers": [
+          110
+        ]
       },
       "rent_schedule_monthly_rent": {
         "value": [
           2845
         ],
-        "citation": "[Paragraph 68] Monthly Base Rent: $2,845.00",
-        "confidence": 1.0
+        "citation": "[Paragraph 110] Base rent schedule",
+        "confidence": 1.0,
+        "page_numbers": [
+          110
+        ]
       },
       "rent_schedule_annual_rent_per_rsf": {
         "value": [
           18.53
         ],
-        "citation": "[Paragraph 68] Annual Rate Per RSF: $18.53",
-        "confidence": 1.0
+        "citation": "[Paragraph 110] Annual rate per RSF",
+        "confidence": 1.0,
+        "page_numbers": [
+          110
+        ]
       },
       "total_base_rent": {
         "value": 54055,
-        "citation": "[Paragraph 68] Total Base Rent over initial term: $54,055.00",
-        "confidence": 1.0
+        "citation": "[Paragraph 110] Total Base Rent over initial term",
+        "confidence": 1.0,
+        "page_numbers": [
+          110
+        ]
       },
       "base_rent_escalation": {
-        "value": null,
-        "citation": "",
-        "confidence": 1.0
+        "value": "none",
+        "citation": "[Paragraph 110] Base rent escalation",
+        "confidence": 1.0,
+        "page_numbers": [
+          110
+        ]
       },
       "free_rent_months": {
         "value": 3,
-        "citation": "[Paragraph 67] Three months rent abatement",
+        "citation": "[Paragraph 114] first three (3) full calendar months",
         "confidence": 1.0
       },
       "security_deposit_amount": {
         "value": 2850,
-        "citation": "[Paragraph 71] Security Deposit: $2,850.00",
+        "citation": "[Paragraph 307] SECURITY DEPOSIT. Tenant has deposited with 850 N. HARLOW AVENUE LLC the sum of Two Thousand Eight Hundred Fifty and 00/100 Dollars ($2,850.00)",
         "confidence": 1.0
       },
       "letter_of_credit_required": {
         "value": false,
-        "citation": "[Paragraph 71] Cash deposit, no LOC",
+        "citation": "Extracted from document",
         "confidence": 1.0
       },
       "expense_structure": {
-        "value": null,
-        "citation": "",
+        "value": "",
+        "citation": "Extracted from document",
         "confidence": 1.0
       },
       "base_year_expenses": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "base_year_taxes": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "electricity_provision": {
         "value": "Separately metered and billed directly to Tenant by Commonwealth Edison",
-        "citation": "[Paragraph 88] Electricity metered by Commonwealth Edison",
+        "citation": "[Paragraph 126] Utilities: Landlord shall furnish the Premises with heating and air-conditioning reasonably required for the comfortable occupation of the premises during normal business hours (8:00 a.m. to 6:00 p.m.",
         "confidence": 1.0
       },
       "parking_spaces": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "parking_monthly_charge": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "ti_allowance_total": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "renewal_option_exists": {
         "value": false,
-        "citation": "[Paragraph 200] No renewal option granted",
+        "citation": "Extracted from document",
         "confidence": 1.0
       },
       "renewal_options_count": {
         "value": 0.0,
-        "citation": "[Paragraph 200] 0 renewal options",
+        "citation": "Extracted from document",
         "confidence": 1.0
       },
       "renewal_term_months": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "renewal_notice_months": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "early_termination_right": {
         "value": false,
-        "citation": "[Paragraph 205] No early termination right",
+        "citation": "Extracted from document",
         "confidence": 1.0
       },
       "termination_fee_description": {
-        "value": null,
-        "citation": "",
+        "value": "",
+        "citation": "Extracted from document",
         "confidence": 1.0
       },
       "right_to_sublet": {
-        "value": "With prior written consent of Landlord, not unreasonably withheld",
-        "citation": "[Paragraph 120] Subletting with consent",
+        "value": "With prior written consent of Landlord",
+        "citation": "[Paragraph 211] ASSIGNMENT AND SUBLETTING. Tenant shall not, without the prior written consent of Landlord (i) assign this Lease or any interest hereunder; (ii) permit any assignment of this Lease by operation of law; (iii) sublet the Premises or any part thereof; (",
         "confidence": 1.0
       },
       "guarantor_name": {
@@ -196,19 +217,19 @@
       },
       "broker_names": {
         "value": [
-          "PINNACLE REALTY"
+          "Pinnacle Realty"
         ],
-        "citation": "[Paragraph 170] Broker: Pinnacle Realty",
+        "citation": "[Paragraph 287] Pinnacle Realty",
         "confidence": 1.0
       },
       "late_fee": {
         "value": "One Hundred Fifty and 00/100 Dollars ($150.00) late charge and shall bear interest until paid at the annual rate of four (4%) percent in excess of the Corporate base rate then announced from time to time by FIRST MERIDIAN",
-        "citation": "[Paragraph 140] Late charge: $150.00",
+        "citation": "[Paragraph 263] One Hundred Fifty and 00/100 Dollars ($150.00) late charge and shall bear interest until paid at the annual rate of four (4%) percent in excess of the Corporate base rate then announced from time to time by FIRST MERIDIAN",
         "confidence": 1.0
       },
       "holdover_rent": {
         "value": "double the Base Rent set forth in Paragraph 1 hereof and any appropriate Additional Rent then applicable",
-        "citation": "[Paragraph 150] Holdover rent: double Base Rent",
+        "citation": "[Paragraph 218] double the Base Rent set forth in Paragraph 1 hereof and any appropriate Additional Rent then applicable",
         "confidence": 1.0
       }
     }
@@ -218,7 +239,7 @@
     "tokens_in": 0,
     "tokens_out": 0,
     "cost_usd": 0.0,
-    "latency_ms": 4,
+    "latency_ms": 25,
     "models": {}
   },
   "schema": "lease_abstraction"

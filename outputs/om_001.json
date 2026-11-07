@@ -3,42 +3,42 @@
     {
       "property_name": {
         "value": "Marlowe Park Modern Apartments",
-        "citation": "[Page 2] MARLOWE PARK MODERN APARTMENTS",
+        "citation": "[Page 3] Property Name\nMarlowe Park Modern Apartments",
+        "confidence": 1.0,
+        "page_numbers": [
+          3
+        ]
+      },
+      "address": {
+        "value": "7420 E 52nd Ave.",
+        "citation": "[Page 2] 7420 E 52nd Ave. Fairhaven, CO 80271",
         "confidence": 1.0,
         "page_numbers": [
           2
         ]
       },
-      "address": {
-        "value": "7420 E 52nd Ave.",
-        "citation": "[Page 3] 7420 E 52nd Ave.",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
-      },
       "city": {
         "value": "Fairhaven",
-        "citation": "[Page 3] Fairhaven, CO 80271",
+        "citation": "[Page 2] Fairhaven, CO 80271",
         "confidence": 1.0,
         "page_numbers": [
-          3
+          2
         ]
       },
       "state": {
         "value": "CO",
-        "citation": "[Page 3] Fairhaven, CO 80271",
+        "citation": "[Page 2] Fairhaven, CO 80271",
         "confidence": 1.0,
         "page_numbers": [
-          3
+          2
         ]
       },
       "zip_code": {
-        "value": 80271,
-        "citation": "[Page 3] Fairhaven, CO 80271",
+        "value": "80271",
+        "citation": "[Page 2] Fairhaven, CO 80271",
         "confidence": 1.0,
         "page_numbers": [
-          3
+          2
         ]
       },
       "county": {
@@ -50,16 +50,16 @@
         ]
       },
       "submarket": {
-        "value": "Fairhaven International Airport",
-        "citation": "[Page 2] Fairhaven International Airport submarket",
+        "value": "Marlowe Park is positioned at the forefront of continued growth throughout this\nburgeoning",
+        "citation": "[Page 2] Marlowe Park is positioned at the forefront of continued growth throughout this\nburgeoning submarket",
         "confidence": 1.0,
         "page_numbers": [
           2
         ]
       },
       "broker_name": {
-        "value": "Ridgeline Capital Advisors",
-        "citation": "[Page 2] Ridgeline Capital Advisors is pleased to present",
+        "value": "Executive Summary\nRidgeline Capital Advisors",
+        "citation": "[Page 2] Executive Summary\nRidgeline Capital Advisors",
         "confidence": 1.0,
         "page_numbers": [
           2
@@ -67,7 +67,7 @@
       },
       "units": {
         "value": 188.0,
-        "citation": "[Page 2] a 188-unit, 2022 built garden-style apartment community",
+        "citation": "[Page 2] Units: 188",
         "confidence": 1.0,
         "page_numbers": [
           2
@@ -75,7 +75,7 @@
       },
       "year_built": {
         "value": 2022.0,
-        "citation": "[Page 2] 2022 built garden-style apartment community",
+        "citation": "[Page 2] Year Built: 2022",
         "confidence": 1.0,
         "page_numbers": [
           2
@@ -84,11 +84,11 @@
       "year_renovated": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "building_type": {
         "value": "Garden",
-        "citation": "[Page 2] garden-style apartment community",
+        "citation": "[Page 2] Building Type: Garden",
         "confidence": 1.0,
         "page_numbers": [
           2
@@ -96,55 +96,55 @@
       },
       "number_of_buildings": {
         "value": 13.0,
-        "citation": "[Page 3] Number of Buildings 13",
+        "citation": "[Page 2] Buildings: 13",
         "confidence": 1.0,
         "page_numbers": [
-          3
+          2
         ]
       },
       "stories": {
         "value": "2 & 3",
-        "citation": "[Page 3] Stories: 2 & 3",
+        "citation": "[Page 2] Stories: 2 & 3",
         "confidence": 1.0,
         "page_numbers": [
-          3
+          2
         ]
       },
       "rentable_sf": {
         "value": 190142,
-        "citation": "[Page 3] Total Rentable SF: 190,142",
+        "citation": "[Page 2] Rentable SF: 190,142 SF",
         "confidence": 1.0,
         "page_numbers": [
-          3
+          2
         ]
       },
       "average_unit_sf": {
         "value": 1011,
-        "citation": "[Page 6] Average SF: 1,011",
+        "citation": "[Page 2] Average SF: 1,011 SF",
         "confidence": 1.0,
         "page_numbers": [
-          6
+          2
         ]
       },
       "site_acres": {
         "value": 9.52,
-        "citation": "[Page 3] Site Area: 9.52 Acres",
+        "citation": "[Page 2] Site Area: 9.520 acres",
         "confidence": 1.0,
         "page_numbers": [
-          3
+          2
         ]
       },
       "parking_spaces": {
         "value": 266.0,
-        "citation": "[Page 4] Total Parking Spaces: 266",
+        "citation": "[Page 2] Total Parking Spaces: 266",
         "confidence": 1.0,
         "page_numbers": [
-          4
+          2
         ]
       },
       "parking_ratio": {
         "value": 1.41,
-        "citation": "[Page 4] Parking Ratio: 1.41 / Unit",
+        "citation": "[Page 4] Parking Ratio: 1.41",
         "confidence": 1.0,
         "page_numbers": [
           4
@@ -153,21 +153,21 @@
       "asking_price": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "price_per_unit": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "asking_cap_rate": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "occupancy_pct": {
         "value": 71,
-        "citation": "[Page 19] Subject property occupancy is 71.0% as of rent roll",
+        "citation": "[Page 19] is 71% leased as of",
         "confidence": 1.0,
         "page_numbers": [
           19
@@ -175,10 +175,10 @@
       },
       "average_in_place_rent": {
         "value": 2228,
-        "citation": "[Page 13] Average In-Place Rent: $2,228",
+        "citation": "[Page 19] Average In-Place Rent: $2,228",
         "confidence": 1.0,
         "page_numbers": [
-          13
+          19
         ]
       },
       "market_rent": {
@@ -208,7 +208,7 @@
           "Hazel w/ Attached Garage",
           "Ironwood"
         ],
-        "citation": "[Page 6] Floor Plans: Aspen, Birch, Cedar, Dogwood, Elm, Fir, Hazel, Ironwood",
+        "citation": "[Page 6] Floorplans table",
         "confidence": 1.0,
         "page_numbers": [
           6
@@ -217,11 +217,11 @@
       "noi_t12": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "noi_proforma": {
         "value": 3521352,
-        "citation": "[Page 14] Pro Forma Net Operating Income: $3,521,352",
+        "citation": "[Page 14] Net Operating Income: $3,521,352",
         "confidence": 1.0,
         "page_numbers": [
           14
@@ -234,7 +234,7 @@
     "tokens_in": 0,
     "tokens_out": 0,
     "cost_usd": 0.0,
-    "latency_ms": 2,
+    "latency_ms": 16,
     "models": {}
   },
   "schema": "offering_memorandum"

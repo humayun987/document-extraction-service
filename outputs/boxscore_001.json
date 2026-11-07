@@ -34,7 +34,7 @@
         ]
       },
       "avg_sq_ft": {
-        "value": 940,
+        "value": 940.0,
         "citation": "[Sheet: Sheet1, Cell: D7] 940",
         "confidence": 1.0,
         "source_locations": [
@@ -42,7 +42,7 @@
         ]
       },
       "avg_rent": {
-        "value": 5135,
+        "value": 5135.0,
         "citation": "[Sheet: Sheet1, Cell: E7] 5135",
         "confidence": 1.0,
         "source_locations": [
@@ -50,7 +50,7 @@
         ]
       },
       "units": {
-        "value": 9,
+        "value": 9.0,
         "citation": "[Sheet: Sheet1, Cell: F7] 9",
         "confidence": 1.0,
         "source_locations": [
@@ -58,7 +58,7 @@
         ]
       },
       "occ_no_notice": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: G7] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -66,7 +66,7 @@
         ]
       },
       "vacant_rented": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: H7] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -74,7 +74,7 @@
         ]
       },
       "vacant_unrented": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: I7] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -82,7 +82,7 @@
         ]
       },
       "notice_rented": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: J7] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -90,7 +90,7 @@
         ]
       },
       "notice_unrented": {
-        "value": 2,
+        "value": 2.0,
         "citation": "[Sheet: Sheet1, Cell: K7] 2",
         "confidence": 1.0,
         "source_locations": [
@@ -106,7 +106,7 @@
         ]
       },
       "model": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: M7] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -114,7 +114,7 @@
         ]
       },
       "down": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: N7] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -122,7 +122,7 @@
         ]
       },
       "admin": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: O7] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -196,7 +196,7 @@
         ]
       },
       "avg_sq_ft": {
-        "value": 131,
+        "value": 131.0,
         "citation": "[Sheet: Sheet1, Cell: D8] 131",
         "confidence": 1.0,
         "source_locations": [
@@ -204,7 +204,7 @@
         ]
       },
       "avg_rent": {
-        "value": 3231,
+        "value": 3231.0,
         "citation": "[Sheet: Sheet1, Cell: E8] 3231",
         "confidence": 1.0,
         "source_locations": [
@@ -212,7 +212,7 @@
         ]
       },
       "units": {
-        "value": 17,
+        "value": 17.0,
         "citation": "[Sheet: Sheet1, Cell: F8] 17",
         "confidence": 1.0,
         "source_locations": [
@@ -220,7 +220,7 @@
         ]
       },
       "occ_no_notice": {
-        "value": 4,
+        "value": 4.0,
         "citation": "[Sheet: Sheet1, Cell: G8] 4",
         "confidence": 1.0,
         "source_locations": [
@@ -228,7 +228,7 @@
         ]
       },
       "vacant_rented": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: H8] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -236,7 +236,7 @@
         ]
       },
       "vacant_unrented": {
-        "value": 2,
+        "value": 2.0,
         "citation": "[Sheet: Sheet1, Cell: I8] 2",
         "confidence": 1.0,
         "source_locations": [
@@ -244,7 +244,7 @@
         ]
       },
       "notice_rented": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: J8] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -252,7 +252,7 @@
         ]
       },
       "notice_unrented": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: K8] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -268,7 +268,7 @@
         ]
       },
       "model": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: M8] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -276,7 +276,7 @@
         ]
       },
       "down": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: N8] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -284,7 +284,7 @@
         ]
       },
       "admin": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: O8] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -358,7 +358,7 @@
         ]
       },
       "avg_sq_ft": {
-        "value": 40,
+        "value": 40.0,
         "citation": "[Sheet: Sheet1, Cell: D9] 40",
         "confidence": 1.0,
         "source_locations": [
@@ -366,7 +366,7 @@
         ]
       },
       "avg_rent": {
-        "value": 3945,
+        "value": 3945.0,
         "citation": "[Sheet: Sheet1, Cell: E9] 3945",
         "confidence": 1.0,
         "source_locations": [
@@ -374,7 +374,7 @@
         ]
       },
       "units": {
-        "value": 12,
+        "value": 12.0,
         "citation": "[Sheet: Sheet1, Cell: F9] 12",
         "confidence": 1.0,
         "source_locations": [
@@ -382,7 +382,7 @@
         ]
       },
       "occ_no_notice": {
-        "value": 11,
+        "value": 11.0,
         "citation": "[Sheet: Sheet1, Cell: G9] 11",
         "confidence": 1.0,
         "source_locations": [
@@ -390,7 +390,7 @@
         ]
       },
       "vacant_rented": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: H9] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -398,7 +398,7 @@
         ]
       },
       "vacant_unrented": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: I9] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -406,7 +406,7 @@
         ]
       },
       "notice_rented": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: J9] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -414,7 +414,7 @@
         ]
       },
       "notice_unrented": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: K9] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -430,7 +430,7 @@
         ]
       },
       "model": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: M9] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -438,7 +438,7 @@
         ]
       },
       "down": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: N9] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -446,7 +446,7 @@
         ]
       },
       "admin": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: O9] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -520,7 +520,7 @@
         ]
       },
       "avg_sq_ft": {
-        "value": 585,
+        "value": 585.0,
         "citation": "[Sheet: Sheet1, Cell: D10] 585",
         "confidence": 1.0,
         "source_locations": [
@@ -528,7 +528,7 @@
         ]
       },
       "avg_rent": {
-        "value": 6358,
+        "value": 6358.0,
         "citation": "[Sheet: Sheet1, Cell: E10] 6358",
         "confidence": 1.0,
         "source_locations": [
@@ -536,7 +536,7 @@
         ]
       },
       "units": {
-        "value": 17,
+        "value": 17.0,
         "citation": "[Sheet: Sheet1, Cell: F10] 17",
         "confidence": 1.0,
         "source_locations": [
@@ -544,7 +544,7 @@
         ]
       },
       "occ_no_notice": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: G10] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -552,7 +552,7 @@
         ]
       },
       "vacant_rented": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: H10] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -560,7 +560,7 @@
         ]
       },
       "vacant_unrented": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: I10] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -568,7 +568,7 @@
         ]
       },
       "notice_rented": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: J10] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -576,7 +576,7 @@
         ]
       },
       "notice_unrented": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: K10] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -592,7 +592,7 @@
         ]
       },
       "model": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: M10] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -600,7 +600,7 @@
         ]
       },
       "down": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: N10] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -608,7 +608,7 @@
         ]
       },
       "admin": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: O10] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -682,7 +682,7 @@
         ]
       },
       "avg_sq_ft": {
-        "value": 832,
+        "value": 832.0,
         "citation": "[Sheet: Sheet1, Cell: D11] 832",
         "confidence": 1.0,
         "source_locations": [
@@ -690,7 +690,7 @@
         ]
       },
       "avg_rent": {
-        "value": 5343,
+        "value": 5343.0,
         "citation": "[Sheet: Sheet1, Cell: E11] 5343",
         "confidence": 1.0,
         "source_locations": [
@@ -698,7 +698,7 @@
         ]
       },
       "units": {
-        "value": 22,
+        "value": 22.0,
         "citation": "[Sheet: Sheet1, Cell: F11] 22",
         "confidence": 1.0,
         "source_locations": [
@@ -706,7 +706,7 @@
         ]
       },
       "occ_no_notice": {
-        "value": 8,
+        "value": 8.0,
         "citation": "[Sheet: Sheet1, Cell: G11] 8",
         "confidence": 1.0,
         "source_locations": [
@@ -714,7 +714,7 @@
         ]
       },
       "vacant_rented": {
-        "value": 2,
+        "value": 2.0,
         "citation": "[Sheet: Sheet1, Cell: H11] 2",
         "confidence": 1.0,
         "source_locations": [
@@ -722,7 +722,7 @@
         ]
       },
       "vacant_unrented": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: I11] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -730,7 +730,7 @@
         ]
       },
       "notice_rented": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: J11] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -738,7 +738,7 @@
         ]
       },
       "notice_unrented": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: K11] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -754,7 +754,7 @@
         ]
       },
       "model": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: M11] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -762,7 +762,7 @@
         ]
       },
       "down": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: N11] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -770,7 +770,7 @@
         ]
       },
       "admin": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: O11] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -844,7 +844,7 @@
         ]
       },
       "avg_sq_ft": {
-        "value": 548,
+        "value": 548.0,
         "citation": "[Sheet: Sheet1, Cell: D12] 548",
         "confidence": 1.0,
         "source_locations": [
@@ -852,7 +852,7 @@
         ]
       },
       "avg_rent": {
-        "value": 8030,
+        "value": 8030.0,
         "citation": "[Sheet: Sheet1, Cell: E12] 8030",
         "confidence": 1.0,
         "source_locations": [
@@ -860,7 +860,7 @@
         ]
       },
       "units": {
-        "value": 27,
+        "value": 27.0,
         "citation": "[Sheet: Sheet1, Cell: F12] 27",
         "confidence": 1.0,
         "source_locations": [
@@ -868,7 +868,7 @@
         ]
       },
       "occ_no_notice": {
-        "value": 12,
+        "value": 12.0,
         "citation": "[Sheet: Sheet1, Cell: G12] 12",
         "confidence": 1.0,
         "source_locations": [
@@ -876,7 +876,7 @@
         ]
       },
       "vacant_rented": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: H12] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -884,7 +884,7 @@
         ]
       },
       "vacant_unrented": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: I12] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -892,7 +892,7 @@
         ]
       },
       "notice_rented": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: J12] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -900,7 +900,7 @@
         ]
       },
       "notice_unrented": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: K12] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -916,7 +916,7 @@
         ]
       },
       "model": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: M12] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -924,7 +924,7 @@
         ]
       },
       "down": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: N12] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -932,7 +932,7 @@
         ]
       },
       "admin": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: O12] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -1006,7 +1006,7 @@
         ]
       },
       "avg_sq_ft": {
-        "value": 790,
+        "value": 790.0,
         "citation": "[Sheet: Sheet1, Cell: D13] 790",
         "confidence": 1.0,
         "source_locations": [
@@ -1014,7 +1014,7 @@
         ]
       },
       "avg_rent": {
-        "value": 4762,
+        "value": 4762.0,
         "citation": "[Sheet: Sheet1, Cell: E13] 4762",
         "confidence": 1.0,
         "source_locations": [
@@ -1022,7 +1022,7 @@
         ]
       },
       "units": {
-        "value": 62,
+        "value": 62.0,
         "citation": "[Sheet: Sheet1, Cell: F13] 62",
         "confidence": 1.0,
         "source_locations": [
@@ -1030,7 +1030,7 @@
         ]
       },
       "occ_no_notice": {
-        "value": 4,
+        "value": 4.0,
         "citation": "[Sheet: Sheet1, Cell: G13] 4",
         "confidence": 1.0,
         "source_locations": [
@@ -1038,7 +1038,7 @@
         ]
       },
       "vacant_rented": {
-        "value": 3,
+        "value": 3.0,
         "citation": "[Sheet: Sheet1, Cell: H13] 3",
         "confidence": 1.0,
         "source_locations": [
@@ -1046,7 +1046,7 @@
         ]
       },
       "vacant_unrented": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: I13] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -1054,7 +1054,7 @@
         ]
       },
       "notice_rented": {
-        "value": 2,
+        "value": 2.0,
         "citation": "[Sheet: Sheet1, Cell: J13] 2",
         "confidence": 1.0,
         "source_locations": [
@@ -1062,7 +1062,7 @@
         ]
       },
       "notice_unrented": {
-        "value": 2,
+        "value": 2.0,
         "citation": "[Sheet: Sheet1, Cell: K13] 2",
         "confidence": 1.0,
         "source_locations": [
@@ -1078,7 +1078,7 @@
         ]
       },
       "model": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: M13] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -1086,7 +1086,7 @@
         ]
       },
       "down": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: N13] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -1094,7 +1094,7 @@
         ]
       },
       "admin": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: O13] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -1168,7 +1168,7 @@
         ]
       },
       "avg_sq_ft": {
-        "value": 716,
+        "value": 716.0,
         "citation": "[Sheet: Sheet1, Cell: D14] 716",
         "confidence": 1.0,
         "source_locations": [
@@ -1176,7 +1176,7 @@
         ]
       },
       "avg_rent": {
-        "value": 610,
+        "value": 610.0,
         "citation": "[Sheet: Sheet1, Cell: E14] 610",
         "confidence": 1.0,
         "source_locations": [
@@ -1184,7 +1184,7 @@
         ]
       },
       "units": {
-        "value": 20,
+        "value": 20.0,
         "citation": "[Sheet: Sheet1, Cell: F14] 20",
         "confidence": 1.0,
         "source_locations": [
@@ -1192,7 +1192,7 @@
         ]
       },
       "occ_no_notice": {
-        "value": 3,
+        "value": 3.0,
         "citation": "[Sheet: Sheet1, Cell: G14] 3",
         "confidence": 1.0,
         "source_locations": [
@@ -1200,7 +1200,7 @@
         ]
       },
       "vacant_rented": {
-        "value": 2,
+        "value": 2.0,
         "citation": "[Sheet: Sheet1, Cell: H14] 2",
         "confidence": 1.0,
         "source_locations": [
@@ -1208,7 +1208,7 @@
         ]
       },
       "vacant_unrented": {
-        "value": 3,
+        "value": 3.0,
         "citation": "[Sheet: Sheet1, Cell: I14] 3",
         "confidence": 1.0,
         "source_locations": [
@@ -1216,7 +1216,7 @@
         ]
       },
       "notice_rented": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: J14] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -1224,7 +1224,7 @@
         ]
       },
       "notice_unrented": {
-        "value": 2,
+        "value": 2.0,
         "citation": "[Sheet: Sheet1, Cell: K14] 2",
         "confidence": 1.0,
         "source_locations": [
@@ -1240,7 +1240,7 @@
         ]
       },
       "model": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: M14] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -1248,7 +1248,7 @@
         ]
       },
       "down": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: N14] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -1256,7 +1256,7 @@
         ]
       },
       "admin": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: O14] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -1330,7 +1330,7 @@
         ]
       },
       "avg_sq_ft": {
-        "value": 599,
+        "value": 599.0,
         "citation": "[Sheet: Sheet1, Cell: D15] 599",
         "confidence": 1.0,
         "source_locations": [
@@ -1338,7 +1338,7 @@
         ]
       },
       "avg_rent": {
-        "value": 1513,
+        "value": 1513.0,
         "citation": "[Sheet: Sheet1, Cell: E15] 1513",
         "confidence": 1.0,
         "source_locations": [
@@ -1346,7 +1346,7 @@
         ]
       },
       "units": {
-        "value": 7,
+        "value": 7.0,
         "citation": "[Sheet: Sheet1, Cell: F15] 7",
         "confidence": 1.0,
         "source_locations": [
@@ -1354,7 +1354,7 @@
         ]
       },
       "occ_no_notice": {
-        "value": 2,
+        "value": 2.0,
         "citation": "[Sheet: Sheet1, Cell: G15] 2",
         "confidence": 1.0,
         "source_locations": [
@@ -1362,7 +1362,7 @@
         ]
       },
       "vacant_rented": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: H15] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -1370,7 +1370,7 @@
         ]
       },
       "vacant_unrented": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: I15] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -1378,7 +1378,7 @@
         ]
       },
       "notice_rented": {
-        "value": 2,
+        "value": 2.0,
         "citation": "[Sheet: Sheet1, Cell: J15] 2",
         "confidence": 1.0,
         "source_locations": [
@@ -1386,7 +1386,7 @@
         ]
       },
       "notice_unrented": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: K15] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -1402,7 +1402,7 @@
         ]
       },
       "model": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: M15] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -1410,7 +1410,7 @@
         ]
       },
       "down": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: N15] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -1418,7 +1418,7 @@
         ]
       },
       "admin": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: O15] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -1492,7 +1492,7 @@
         ]
       },
       "avg_sq_ft": {
-        "value": 895,
+        "value": 895.0,
         "citation": "[Sheet: Sheet1, Cell: D16] 895",
         "confidence": 1.0,
         "source_locations": [
@@ -1500,7 +1500,7 @@
         ]
       },
       "avg_rent": {
-        "value": 9302,
+        "value": 9302.0,
         "citation": "[Sheet: Sheet1, Cell: E16] 9302",
         "confidence": 1.0,
         "source_locations": [
@@ -1508,7 +1508,7 @@
         ]
       },
       "units": {
-        "value": 8,
+        "value": 8.0,
         "citation": "[Sheet: Sheet1, Cell: F16] 8",
         "confidence": 1.0,
         "source_locations": [
@@ -1516,7 +1516,7 @@
         ]
       },
       "occ_no_notice": {
-        "value": 4,
+        "value": 4.0,
         "citation": "[Sheet: Sheet1, Cell: G16] 4",
         "confidence": 1.0,
         "source_locations": [
@@ -1524,7 +1524,7 @@
         ]
       },
       "vacant_rented": {
-        "value": 2,
+        "value": 2.0,
         "citation": "[Sheet: Sheet1, Cell: H16] 2",
         "confidence": 1.0,
         "source_locations": [
@@ -1532,7 +1532,7 @@
         ]
       },
       "vacant_unrented": {
-        "value": 1,
+        "value": 1.0,
         "citation": "[Sheet: Sheet1, Cell: I16] 1",
         "confidence": 1.0,
         "source_locations": [
@@ -1540,7 +1540,7 @@
         ]
       },
       "notice_rented": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: J16] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -1548,7 +1548,7 @@
         ]
       },
       "notice_unrented": {
-        "value": 2,
+        "value": 2.0,
         "citation": "[Sheet: Sheet1, Cell: K16] 2",
         "confidence": 1.0,
         "source_locations": [
@@ -1564,7 +1564,7 @@
         ]
       },
       "model": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: M16] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -1572,7 +1572,7 @@
         ]
       },
       "down": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: N16] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -1580,7 +1580,7 @@
         ]
       },
       "admin": {
-        "value": 0,
+        "value": 0.0,
         "citation": "[Sheet: Sheet1, Cell: O16] 0",
         "confidence": 1.0,
         "source_locations": [
@@ -1626,7 +1626,7 @@
     "tokens_in": 0,
     "tokens_out": 0,
     "cost_usd": 0.0,
-    "latency_ms": 22,
+    "latency_ms": 43,
     "models": {}
   },
   "schema": "boxscore"

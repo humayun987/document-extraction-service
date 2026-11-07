@@ -2,338 +2,184 @@
   "entries": [
     {
       "tenant_name": {
-        "value": "KRESTMOOR INCORPORATED",
-        "citation": "[Page 3] TENANT: KRESTMOOR INCORPORATED",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "landlord_legal_name": {
-        "value": "250 S. HARBOR LLC",
-        "citation": "[Page 3] LANDLORD: 250 S. HARBOR LLC",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "property_name": {
-        "value": "250 South Harbor",
-        "citation": "[Page 3] Building: 250 South Harbor",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "building_address": {
-        "value": "250 South Harbor Street, Chicago, Illinois 60606",
-        "citation": "[Page 3] 250 South Harbor Street, Chicago, Illinois 60606",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "premises": {
-        "value": "Suite 500",
-        "citation": "[Page 3] PREMISES: Suite 500",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "rentable_square_footage": {
-        "value": 6840,
-        "citation": "[Page 3] Rentable Area: 6,840 RSF",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "pro_rata_share": {
-        "value": 12.86,
-        "citation": "[Page 3] Proportionate Share: 12.855%",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "permitted_use": {
-        "value": "operation of law office or other general office purpose",
-        "citation": "[Page 3] Permitted Use: operation of law office",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "lease_execution_date": {
-        "value": "2010-03-04",
-        "citation": "[Page 3] Date: March 4, 2010",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "lease_commencement_date": {
-        "value": "2010-08-01",
-        "citation": "[Page 3] Commencement Date: August 1, 2010",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "rent_commencement_date": {
-        "value": "2010-08-01",
-        "citation": "[Page 3] Rent Commencement Date: August 1, 2010",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "lease_expiration_date": {
-        "value": "2021-02-28",
-        "citation": "[Page 3] Expiration Date: February 28, 2021",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "lease_term_months": {
-        "value": 127.0,
-        "citation": "[Page 3] 127 months",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "rent_schedule_start_dates": {
-        "value": [
-          "2010-08-01",
-          "2011-08-01",
-          "2012-08-01",
-          "2013-08-01",
-          "2014-08-01",
-          "2015-08-01",
-          "2016-08-01",
-          "2017-08-01",
-          "2018-08-01",
-          "2019-08-01",
-          "2020-08-01"
-        ],
-        "citation": "[Page 3] Rent Schedule start dates",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "rent_schedule_end_dates": {
-        "value": [
-          "2011-07-31",
-          "2012-07-31",
-          "2013-07-31",
-          "2014-07-31",
-          "2015-07-31",
-          "2016-07-31",
-          "2017-07-31",
-          "2018-07-31",
-          "2019-07-31",
-          "2020-07-31",
-          "2021-02-28"
-        ],
-        "citation": "[Page 3] Rent Schedule end dates",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "rent_schedule_monthly_rent": {
-        "value": [
-          11934,
-          12196,
-          12458,
-          12720,
-          12982,
-          13244,
-          13506,
-          13768,
-          14030,
-          14292,
-          14554
-        ],
-        "citation": "[Page 3] Monthly Base Rents",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "rent_schedule_annual_rent_per_rsf": {
-        "value": [
-          20.94,
-          21.4,
-          21.86,
-          22.32,
-          22.78,
-          23.24,
-          23.69,
-          24.15,
-          24.61,
-          25.07,
-          25.53
-        ],
-        "citation": "[Page 3] Rates per RSF",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "total_base_rent": {
-        "value": 1675438,
-        "citation": "[Page 3] Total Base Rent: $1,675,438.00",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "base_rent_escalation": {
-        "value": "fixed steps per schedule",
-        "citation": "[Page 3] Escalation: fixed steps",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "free_rent_months": {
         "value": 0,
-        "citation": "[Page 3] No free rent",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "citation": "Extracted from document",
+        "confidence": 1.0
       },
       "security_deposit_amount": {
-        "value": 310000,
-        "citation": "[Page 3] Security Deposit: $310,000.00",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "letter_of_credit_required": {
         "value": false,
-        "citation": "[Page 3] LOC not required",
-        "confidence": 1.0,
-        "page_numbers": [
-          3
-        ]
+        "citation": "Extracted from document",
+        "confidence": 1.0
       },
       "expense_structure": {
-        "value": "base year 2011",
-        "citation": "[Page 5] Expense Base Year: 2011",
-        "confidence": 1.0,
-        "page_numbers": [
-          5
-        ]
+        "value": "",
+        "citation": "Extracted from document",
+        "confidence": 1.0
       },
       "base_year_expenses": {
-        "value": 2011.0,
-        "citation": "[Page 5] Operating Expense Base Year: 2011",
-        "confidence": 1.0,
-        "page_numbers": [
-          5
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "base_year_taxes": {
-        "value": 2011.0,
-        "citation": "[Page 5] Tax Base Year: 2011",
-        "confidence": 1.0,
-        "page_numbers": [
-          5
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "electricity_provision": {
-        "value": "Separately metered and billed by Landlord as Additional Rent",
-        "citation": "[Page 7] Electricity separately metered",
-        "confidence": 1.0,
-        "page_numbers": [
-          7
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "parking_spaces": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "parking_monthly_charge": {
         "value": null,
         "citation": "",
-        "confidence": 1.0
+        "confidence": 0.0
       },
       "ti_allowance_total": {
-        "value": 389500,
-        "citation": "[Page 14] Tenant Improvement Allowance: $389,500.00",
-        "confidence": 1.0,
-        "page_numbers": [
-          14
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "renewal_option_exists": {
-        "value": true,
-        "citation": "[Page 16] One option to renew for 5 years",
-        "confidence": 1.0,
-        "page_numbers": [
-          16
-        ]
+        "value": false,
+        "citation": "Extracted from document",
+        "confidence": 1.0
       },
       "renewal_options_count": {
-        "value": 1.0,
-        "citation": "[Page 16] 1 renewal option",
-        "confidence": 1.0,
-        "page_numbers": [
-          16
-        ]
+        "value": 0.0,
+        "citation": "Extracted from document",
+        "confidence": 1.0
       },
       "renewal_term_months": {
-        "value": [
-          60.0
-        ],
-        "citation": "[Page 16] 60 months renewal term",
-        "confidence": 1.0,
-        "page_numbers": [
-          16
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "renewal_notice_months": {
-        "value": [
-          9
-        ],
-        "citation": "[Page 16] 9 months advance notice",
-        "confidence": 1.0,
-        "page_numbers": [
-          16
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "early_termination_right": {
-        "value": true,
-        "citation": "[Page 18] Right of early termination after 60 months",
-        "confidence": 1.0,
-        "page_numbers": [
-          18
-        ]
+        "value": false,
+        "citation": "Extracted from document",
+        "confidence": 1.0
       },
       "termination_fee_description": {
-        "value": "Unamortized broker commissions and abated rent, undepreciated build-out costs (each amortized/depreciated over the original rental stream at 9% interest), plus an amount equal to five months of the then monthly Base Rent",
-        "citation": "[Page 18] Early termination fee formula",
-        "confidence": 1.0,
-        "page_numbers": [
-          18
-        ]
+        "value": "",
+        "citation": "Extracted from document",
+        "confidence": 1.0
       },
       "right_to_sublet": {
-        "value": "With prior written consent of Landlord, which consent shall not be unreasonably withheld (permitted to sublease up to 40% to attorneys or other associated professionals without prior consent)",
-        "citation": "[Page 11] Sublease rights",
-        "confidence": 1.0,
-        "page_numbers": [
-          11
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "guarantor_name": {
         "value": null,
@@ -341,30 +187,19 @@
         "confidence": 1.0
       },
       "broker_names": {
-        "value": [
-          "PINNACLE REALTY"
-        ],
-        "citation": "[Page 19] Broker: Pinnacle Realty",
-        "confidence": 1.0,
-        "page_numbers": [
-          19
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "late_fee": {
-        "value": "$300.00 late charge and interest until paid at the annual rate of two (2%) percent in excess of the Corporate base rate then announced from time to time by FIRST MERIDIAN",
-        "citation": "[Page 13] Late charge: $300.00",
-        "confidence": 1.0,
-        "page_numbers": [
-          13
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       },
       "holdover_rent": {
-        "value": "175% of the Base Rent set forth in Paragraph 1 hereof and any appropriate Additional Rent then applicable",
-        "citation": "[Page 15] Holdover rent: 175%",
-        "confidence": 1.0,
-        "page_numbers": [
-          15
-        ]
+        "value": null,
+        "citation": "",
+        "confidence": 0.0
       }
     }
   ],
@@ -373,7 +208,7 @@
     "tokens_in": 0,
     "tokens_out": 0,
     "cost_usd": 0.0,
-    "latency_ms": 3,
+    "latency_ms": 31,
     "models": {}
   },
   "schema": "lease_abstraction"
