@@ -64,3 +64,8 @@ Thumbs.db
 desktop.ini
 .idea/
 .vscode/
+
+
+*.db
+*.sqlite
+*.sqlite3
