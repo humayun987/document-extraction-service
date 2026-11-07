@@ -57,3 +57,58 @@ def test_durable_queue_claim_and_recovery(db_session):
     # Verify job remains SUCCESS
     refreshed = db_session.query(Job).filter(Job.job_id == job.job_id).first()
     assert refreshed.status == JobStatus.SUCCESS
+
+def test_job_processing_timeout_enforcement(db_session):
+    schema = {"name": "timeout_test", "fields": {"id": {"primary": True}}}
+    job, _ = JobService.create_job(
+        db=db_session,
+        file_bytes=b"id,col\n1,val\n",
+        file_name="timeout.csv",
+        schema_dict=schema,
+        org_id="test_org"
+    )
+
+    # Simulate job created 1,801 seconds ago (exceeding MAX_DOCUMENT_PROCESSING_TIME = 1800)
+    job.created_at = datetime.now(timezone.utc) - timedelta(seconds=1805)
+    db_session.commit()
+
+    timed_out = JobService.check_and_enforce_timeout(db_session, job)
+    assert timed_out is True
+
+    refreshed = db_session.query(Job).filter(Job.job_id == job.job_id).first()
+    assert refreshed.status == JobStatus.FAILED
+    assert refreshed.error["code"] == "PROCESSING_TIMEOUT"
+
+def test_idempotency_under_identical_submission(db_session):
+    schema = {"name": "idemp_test", "fields": {"id": {"primary": True}}}
+    file_bytes = b"id,val\n1,test\n"
+
+    job1, is_existing1 = JobService.create_job(
+        db=db_session,
+        file_bytes=file_bytes,
+        file_name="idemp.csv",
+        schema_dict=schema,
+        org_id="org-alpha"
+    )
+    assert is_existing1 is False
+
+    job2, is_existing2 = JobService.create_job(
+        db=db_session,
+        file_bytes=file_bytes,
+        file_name="idemp.csv",
+        schema_dict=schema,
+        org_id="org-alpha"
+    )
+    assert is_existing2 is True
+    assert job1.job_id == job2.job_id
+
+    # Cross-tenant must create distinct job
+    job3, is_existing3 = JobService.create_job(
+        db=db_session,
+        file_bytes=file_bytes,
+        file_name="idemp.csv",
+        schema_dict=schema,
+        org_id="org-beta"
+    )
+    assert is_existing3 is False
+    assert job3.job_id != job1.job_id

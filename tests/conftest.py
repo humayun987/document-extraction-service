@@ -3,6 +3,7 @@ import pytest
 from pathlib import Path
 from fastapi.testclient import TestClient
 
+os.environ["TESTING"] = "1"
 os.environ["DATABASE_URL"] = "sqlite:///./test_extraction.db"
 os.environ["LLM_BASE_URL"] = "https://mock-openrouter.ai/api/v1"
 os.environ["LLM_API_KEY"] = "mock-key-for-tests"
