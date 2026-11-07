@@ -1,0 +1,225 @@
+{
+  "entries": [
+    {
+      "tenant_name": {
+        "value": "KESTREL ANALYTICS USA LLC",
+        "citation": "[Paragraph 33] KESTREL ANALYTICS USA LLC as Tenant",
+        "confidence": 1.0
+      },
+      "landlord_legal_name": {
+        "value": "850 N. HARLOW AVENUE LLC",
+        "citation": "[Paragraph 26] 850 N. HARLOW AVENUE LLC as Landlord",
+        "confidence": 1.0
+      },
+      "property_name": {
+        "value": "Harlow Office Building",
+        "citation": "[Paragraph 21] Harlow Office Building",
+        "confidence": 1.0
+      },
+      "building_address": {
+        "value": "ONE HARLOW PLACE, 850 N. HARLOW AVENUE, Naperville, Illinois 60540",
+        "citation": "[Paragraph 21] 850 North Harlow Avenue Naperville, Illinois 60540",
+        "confidence": 1.0
+      },
+      "premises": {
+        "value": "Suite 310",
+        "citation": "[Paragraph 63] Premises: Suite 310",
+        "confidence": 1.0
+      },
+      "rentable_square_footage": {
+        "value": 1842,
+        "citation": "[Paragraph 64] 1,842 Rentable Square Feet",
+        "confidence": 1.0
+      },
+      "pro_rata_share": {
+        "value": null,
+        "citation": "",
+        "confidence": 1.0
+      },
+      "permitted_use": {
+        "value": "general office purposes",
+        "citation": "[Paragraph 73] general office purposes",
+        "confidence": 1.0
+      },
+      "lease_execution_date": {
+        "value": "2025-08-21",
+        "citation": "[Paragraph 19] Dated August 21, 2025",
+        "confidence": 1.0
+      },
+      "lease_commencement_date": {
+        "value": "2025-10-01",
+        "citation": "[Paragraph 65] Lease Commencement Date: October 1, 2025",
+        "confidence": 1.0
+      },
+      "rent_commencement_date": {
+        "value": "2026-01-01",
+        "citation": "[Paragraph 67] Rent Commencement Date: January 1, 2026",
+        "confidence": 1.0
+      },
+      "lease_expiration_date": {
+        "value": "2027-04-30",
+        "citation": "[Paragraph 66] Expiration Date: April 30, 2027",
+        "confidence": 1.0
+      },
+      "lease_term_months": {
+        "value": 19.0,
+        "citation": "[Paragraph 65] 19 calendar months",
+        "confidence": 1.0
+      },
+      "rent_schedule_start_dates": {
+        "value": [
+          "2025-10-01"
+        ],
+        "citation": "[Paragraph 68] Base Rent Schedule start",
+        "confidence": 1.0
+      },
+      "rent_schedule_end_dates": {
+        "value": [
+          "2027-04-30"
+        ],
+        "citation": "[Paragraph 68] Base Rent Schedule end",
+        "confidence": 1.0
+      },
+      "rent_schedule_monthly_rent": {
+        "value": [
+          2845
+        ],
+        "citation": "[Paragraph 68] Monthly Base Rent: $2,845.00",
+        "confidence": 1.0
+      },
+      "rent_schedule_annual_rent_per_rsf": {
+        "value": [
+          18.53
+        ],
+        "citation": "[Paragraph 68] Annual Rate Per RSF: $18.53",
+        "confidence": 1.0
+      },
+      "total_base_rent": {
+        "value": 54055,
+        "citation": "[Paragraph 68] Total Base Rent over initial term: $54,055.00",
+        "confidence": 1.0
+      },
+      "base_rent_escalation": {
+        "value": null,
+        "citation": "",
+        "confidence": 1.0
+      },
+      "free_rent_months": {
+        "value": 3,
+        "citation": "[Paragraph 67] Three months rent abatement",
+        "confidence": 1.0
+      },
+      "security_deposit_amount": {
+        "value": 2850,
+        "citation": "[Paragraph 71] Security Deposit: $2,850.00",
+        "confidence": 1.0
+      },
+      "letter_of_credit_required": {
+        "value": false,
+        "citation": "[Paragraph 71] Cash deposit, no LOC",
+        "confidence": 1.0
+      },
+      "expense_structure": {
+        "value": null,
+        "citation": "",
+        "confidence": 1.0
+      },
+      "base_year_expenses": {
+        "value": null,
+        "citation": "",
+        "confidence": 1.0
+      },
+      "base_year_taxes": {
+        "value": null,
+        "citation": "",
+        "confidence": 1.0
+      },
+      "electricity_provision": {
+        "value": "Separately metered and billed directly to Tenant by Commonwealth Edison",
+        "citation": "[Paragraph 88] Electricity metered by Commonwealth Edison",
+        "confidence": 1.0
+      },
+      "parking_spaces": {
+        "value": null,
+        "citation": "",
+        "confidence": 1.0
+      },
+      "parking_monthly_charge": {
+        "value": null,
+        "citation": "",
+        "confidence": 1.0
+      },
+      "ti_allowance_total": {
+        "value": null,
+        "citation": "",
+        "confidence": 1.0
+      },
+      "renewal_option_exists": {
+        "value": false,
+        "citation": "[Paragraph 200] No renewal option granted",
+        "confidence": 1.0
+      },
+      "renewal_options_count": {
+        "value": 0.0,
+        "citation": "[Paragraph 200] 0 renewal options",
+        "confidence": 1.0
+      },
+      "renewal_term_months": {
+        "value": null,
+        "citation": "",
+        "confidence": 1.0
+      },
+      "renewal_notice_months": {
+        "value": null,
+        "citation": "",
+        "confidence": 1.0
+      },
+      "early_termination_right": {
+        "value": false,
+        "citation": "[Paragraph 205] No early termination right",
+        "confidence": 1.0
+      },
+      "termination_fee_description": {
+        "value": null,
+        "citation": "",
+        "confidence": 1.0
+      },
+      "right_to_sublet": {
+        "value": "With prior written consent of Landlord, not unreasonably withheld",
+        "citation": "[Paragraph 120] Subletting with consent",
+        "confidence": 1.0
+      },
+      "guarantor_name": {
+        "value": null,
+        "citation": "",
+        "confidence": 1.0
+      },
+      "broker_names": {
+        "value": [
+          "PINNACLE REALTY"
+        ],
+        "citation": "[Paragraph 170] Broker: Pinnacle Realty",
+        "confidence": 1.0
+      },
+      "late_fee": {
+        "value": "One Hundred Fifty and 00/100 Dollars ($150.00) late charge and shall bear interest until paid at the annual rate of four (4%) percent in excess of the Corporate base rate then announced from time to time by FIRST MERIDIAN",
+        "citation": "[Paragraph 140] Late charge: $150.00",
+        "confidence": 1.0
+      },
+      "holdover_rent": {
+        "value": "double the Base Rent set forth in Paragraph 1 hereof and any appropriate Additional Rent then applicable",
+        "citation": "[Paragraph 150] Holdover rent: double Base Rent",
+        "confidence": 1.0
+      }
+    }
+  ],
+  "metadata": {
+    "model_calls": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 4,
+    "models": {}
+  },
+  "schema": "lease_abstraction"
+}
